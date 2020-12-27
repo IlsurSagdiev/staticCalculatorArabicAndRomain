@@ -35,9 +35,8 @@ public class Calculator {
             if (s.equals(arabicNumerals[i])) {
                 isArabic = true;
                 return number = i;
-
-
-            } else if (s.equals(romainNumerals[i])) {
+            } 
+            else if (s.equals(romainNumerals[i])) {
                 isRomain = true;
                 return number = i;
             }
