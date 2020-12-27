@@ -27,8 +27,8 @@ public class Calculator {
 
     // проверка на числа и парсинг
     public static int checkNumber(String s) throws Exception {
+        
         int number = 0;
-
         boolean numberIsNull = true;
 
         for (int i = 1; i < 11; i++) {
@@ -40,7 +40,6 @@ public class Calculator {
             } else if (s.equals(romainNumerals[i])) {
                 isRomain = true;
                 return number = i;
-
             }
         }
         if (numberIsNull == true) {
@@ -53,7 +52,6 @@ public class Calculator {
     public static void checkСompatibility(boolean a, boolean b) throws Exception {
         if (a == b) {
             throw new Exception("Числа не совместимы.");
-
         }
     }
 
@@ -77,14 +75,14 @@ public class Calculator {
                 throw new Exception("Упс! Вы ввели неверный арифметический символ");
         }
         System.out.println("Ответ : " + result);
-
-
     }
 
     // арифметические операции для римских чисел с выводом реультата
     public static void operationsRomain(String s) throws Exception {
 
         int result;
+        int i = 0;
+        List<RomanNumeral> romanNumerals = Arrays.asList(RomanNumeral.values());
 
         switch (s) {
             case "+":
@@ -102,10 +100,6 @@ public class Calculator {
             default:
                 throw new Exception("Упс! Вы ввели неверный арифметический символ");
         }
-
-        List<RomanNumeral> romanNumerals = Arrays.asList(RomanNumeral.values());
-
-        int i = 0;
 
         while ((result > 0) && (i < romanNumerals.size())) {
             RomanNumeral currentSymbol = romanNumerals.get(i);
